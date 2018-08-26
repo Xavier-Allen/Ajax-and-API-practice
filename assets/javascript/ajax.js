@@ -17,9 +17,17 @@ $(document).ready(function () {
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).then(function (resposne) {
-            console.log(resposne);
-        });
+        }).then(function (response) {
+            console.log(response);
+            // Setting Current Temp and Current Weather to get later.
+            var currentTemp = Math.floor(((response.main.temp) - 273) * 1.80 + 32);
+            var currentWeather = response.weather[0].main; 
+            
+            // Appending the temp and weather.
+            $("#temp").html($("<h1>").text("The Current Tempreture is "  + currentTemp + " degrees!"));
+            $("#weather").html($("<h1>").text("Skies: " + currentWeather + "!"));
+            
+         });
 
     });
 });
