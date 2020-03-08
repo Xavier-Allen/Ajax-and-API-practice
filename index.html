@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AJAX & API Practice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/ajax.js"></script>
-</head>
-<body>
-    <!--Asks the User what mood their in.-->
-    <div id = "mood">
-        
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic API/AJAX Practice</title>
+    <script src="javascript/main.js"></script>
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>Welcome to Movie Search.com!</h1>
+      <p>Please enter a movie title!</p>
     </div>
-    <!--Asks the user what city they are in-->
-    Please enter your city's name! <input id = "city" type = "text">
-    <input id = "cityName" type = "submit">
-
-    <!--This is where the WeatherAPI results go -->
-    <div id = "currentWeather">
-    <div id = "temp"></div>
-    <div id = "weather"></div>
+    <div id="movieDiv">
+      <label for="movieTitle"></label>
+      <input type="text" name="movieTitle" class="movieTitle" />
+      <button type="submit" class="submit">Submit</button>
     </div>
-</body>
+  </body>
 </html>
